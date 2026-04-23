@@ -8,8 +8,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 app.use(express.json())
 app.use(express.static(__dirname))
 
-const CENTAUR_API = 'https://svc-ai.dayno.xyz'
-const CENTAUR_KEY = process.env.CENTAUR_API_KEY
+// Internal API when deployed on Centaur infra, external for local dev
+const CENTAUR_API = process.env.CENTAUR_API_URL || 'https://svc-ai.dayno.xyz'
+const CENTAUR_KEY = process.env.CENTAUR_API_KEY || ''
 
 // ── Venue scout endpoint ───────────────────────────────────────────────────
 // Receives the brief from the web app and runs it through Centaur's skill
