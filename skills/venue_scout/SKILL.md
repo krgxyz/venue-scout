@@ -12,15 +12,14 @@ Find and rank venues for Paradigm events. Searches Eater, Infatuation, Resy, Ope
 
 ## Behavior
 
-When this skill is invoked, respond with the web app URL so the user can go through the full intake flow:
+When this skill is invoked without a brief, ask the user for one:
 
-> 🗺️ **Venue Scout is ready.**
-> Open the full intake flow here: **https://venue-scout.centaur.paradigm.xyz**
+> 🗺️ **Venue Scout is ready.** Give me a quick brief and I'll return a ranked shortlist:
+> `city · event type · guest count · vibe · budget · any dealbreakers`
 >
-> Or give me a quick brief and I'll return a shortlist right here in Slack:
-> `city · event type · guest count · vibe · budget`
+> _Example: SF · partner dinner · 20 guests · intimate and design-forward · $10k · no hotel ballrooms_
 
-If the user provides a brief directly in Slack (no app), use the websearch tool to research venues and return a ranked shortlist using the criteria below.
+Once the user provides a brief (either upfront or in reply), use the websearch tool to research venues and return a ranked shortlist using the criteria below.
 
 ## Paradigm's venue database
 
